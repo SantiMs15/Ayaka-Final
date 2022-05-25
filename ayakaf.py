@@ -8,16 +8,15 @@ load_dotenv()
 TOKEN = os.getenv('TOKEN')
 
 @client.event
+async def on_ready():
+    print(f"Bot logged in as {client.user}, Lets Translate!")
+
+@client.event
 async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!translate'):
-        await message.channel.send("I can translate whatever you want!")
-
-@client.event
-async def on_connect():
-    print("Lets Translate!")
-
+    if message.content.startswith('!Hello Ayaka'):
+        await message.channel.send("Hi I can translate whatever you want!")
 
 client.run(TOKEN) 
