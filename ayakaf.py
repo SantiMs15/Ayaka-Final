@@ -25,4 +25,4 @@ async def on_member_join(member):
     await member.dm_channel.send(f"Bienvenido seas {member}. Este es el servidor de prueba de nuestra bot Ayaka, que esperamos que nos haga pasar la materia :v")
 
 client.run(TOKEN) 
-#prueba
+
