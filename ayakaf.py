@@ -1,5 +1,6 @@
 from imaplib import _CommandResults
 import googletrans
+from googletrans import Translator
 import os
 import discord
 from dotenv import load_dotenv
