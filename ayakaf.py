@@ -18,6 +18,10 @@ async def on_reaction_add(reaction, user):
             tradu= Translator ()
             trans_en= tradu.translate(reaction.message.content, src='es' , dest='en')
             await reaction.message.channel.send(trans_en.text)
+        if reaction.emoji.id == 979236870921814086:
+                tradu = Translator()
+                trans_en = tradu.translate(reaction.message.content, src='en', dest='es')
+                await reaction.message.channel.send(trans_en.text)
 client.run(TOKEN)
 
 
