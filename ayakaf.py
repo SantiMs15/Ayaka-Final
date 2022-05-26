@@ -14,3 +14,6 @@ async def on_connect():
 
 
 client.run(TOKEN) 
+print("hola mundo")
+
+#hola gente
