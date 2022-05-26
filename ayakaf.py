@@ -27,3 +27,10 @@ client.run(TOKEN)
 
 
 
+<<<<<<< HEAD
+client.run(TOKEN) 
+print("hola mundo")
+
+#hola gente
+=======
+>>>>>>> 731495eb3c7e57be4d3b277edef48c2ae46cf713
