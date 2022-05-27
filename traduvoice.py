@@ -1,3 +1,4 @@
-import pyaudio
-
+from google_trans_new import google_translator
+import speech_recognition
+import pyttsx3
 
