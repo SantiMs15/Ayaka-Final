@@ -1,3 +1,4 @@
+from gettext import translation
 import discord
 import googletrans
 from discord.ext import commands
@@ -10,20 +11,9 @@ TOKEN=os.getenv('TOKEN')
 @client.event
 async def on_ready():
     print("Tamo activos")
+@client.event
 async def on_reaction_add(reaction, user):
-    print("emoji-id")
-    print(reaction.emoji.id)
-    if reaction.count==1:
-        if reaction.emoji.id==979203901544890438:
-            tradu= Translator ()
-            trans_en= tradu.translate(reaction.message.content, src='es' , dest='en')
-            await reaction.message.channel.send(trans_en.text)
-        if reaction.emoji.id == 979236870921814086:
-                tradu = Translator()
-                trans_en = tradu.translate(reaction.message.content, src='en', dest='es')
-                await reaction.message.channel.send(trans_en.text)
+    channel=reaction.message.channel
+    if reaction.emoji=='us':
+        translation = translate_text('en', reaction.message.content)
 client.run(TOKEN)
-
-
-
-
